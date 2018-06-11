@@ -1,3 +1,7 @@
+Introduction
+------------
+MXNet-G is a deep learning framework designed on the basis of MXNet. It allows you to train models with a novel distributed SGD algorithm named Grouping-SGD which uses a new parallelization scheme named GSP for distributed DNN. In Grouping-SGD, machines are partitioned into multiple groups, ensuring that networked machines in the same group have identical or similar hardware configurations and therefore similar performance. Machines in the same group update the models synchronously, as in Sync-SGD. Different groups update the models asynchronously, as in Async-SGD, and each group is treated as a virtual scheduling unit. To further improve the performance of Grouping-SGD, the parameter servers are arranged according to performance from high to low. Grouping-SGD can converge faster than the other three algorithms including Sync-SGD, Async-SGD and Stale-SGD, while achieving accuracies very close to those of Sync-SGD.
+
 Installing MXNet-G
 ------------
 
